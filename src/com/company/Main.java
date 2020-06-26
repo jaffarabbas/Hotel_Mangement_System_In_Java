@@ -1,8 +1,8 @@
 package com.company;
 
 class Administration{
-    private String user_name;
-    private String password;
+    private static String user_name;
+    private static String password;
 
 
     void Login(String username, String password){
