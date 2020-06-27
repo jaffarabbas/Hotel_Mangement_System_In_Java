@@ -28,11 +28,11 @@ class HOtel_Mangement_system{
     }
 
     static void Collection_of_Admin(){
-        ArrayList<Administration> Array_of_admin = new ArrayList<Administration>(3);
-        Array_of_admin.add(new Administration("jaffar","123"));
-        Array_of_admin.add(new Administration("ahmed","123"));
-        Array_of_admin.add(new Administration("hasan","123"));
-        Administration.Admin_Collection_in_FIle();
+         ArrayList<Administration> Array_of_admin = new ArrayList<Administration>(3);
+         Array_of_admin.add(new Administration("jaffar","123"));
+         Array_of_admin.add(new Administration("ahmed","123"));
+         Array_of_admin.add(new Administration("hasan","123"));
+         //Administration.Admin_Collection_in_FIle();
     }
 }
 
@@ -74,7 +74,7 @@ class Administration{
             //insertion admin
             BufferedWriter writer = new BufferedWriter(new FileWriter(filename,true));
 
-            writer.write(getUser_name()+"  "+getPassword());
+            writer.write("\n"+getUser_name()+"  \t\t"+getPassword()+"\n");
 
             writer.close();
         }
@@ -91,11 +91,31 @@ class Hotel_Records extends Administration{
     }
 
     public void Hotel_system(){
+        System.out.println("Choose your desire : \n1)Customer Record\n2)Update Record\n3)Room Occupied\n");
+        Scanner scanner_for_Hotel_System = new Scanner(System.in);
 
+        short slecter_for_scanner = scanner_for_Hotel_System.nextShort();
+
+        switch (slecter_for_scanner){
+            case '1':
+                //
+                break;
+            case '2':
+                //
+                break;
+            case '3':
+                //
+                break;
+            default:
+                //
+                break;
+        }
     }
 }
 class Cutomers_Record extends Hotel_Records{
+     public void Set_Cutomers_Record(){
 
+     }
 }
 class Update_Record  extends Hotel_Records{
 
